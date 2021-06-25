@@ -23,6 +23,12 @@
 </table>
 
 
+# What's Included Inside
+- Fetch live data from API 
+- Convert Rates
+- Render Dynamic Data on Screen
+- Asynchronous method calls
+
 A new Flutter project.
 
 ## Getting Started
