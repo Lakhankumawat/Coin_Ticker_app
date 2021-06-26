@@ -31,15 +31,15 @@ const List<String> cryptoList = [
   'LTC',
 ];
 
-const APIKEY2 = 'DB21A1A4-07DA-4938-9D0B-E7DF594E23D7';
-const APIKEY = '1B73D67E-5B70-4728-A5B3-A2874C019C21';
+//TODO: this API Key won't work in your case head over to CoinApi.io and generate your own API Key Copy Paste Here and that's all you need to do , Happy Coding !!
+const APIKEY = '1B73D67E-FFFFFFFFFFF-A2874C019C21';
 const coinAPI = 'https://rest.coinapi.io/v1/exchangerate';
 
 class CoinData {
   Future<dynamic> getCoinData(String selectedCurrency) async {
     Map<String, String> cryptomap = {};
     for (String crypto in cryptoList) {
-      var uri = Uri.parse('$coinAPI/$crypto/$selectedCurrency?apikey=$APIKEY2');
+      var uri = Uri.parse('$coinAPI/$crypto/$selectedCurrency?apikey=$APIKEY');
       http.Response response = await http.get(uri);
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
